@@ -35,7 +35,7 @@ HTTP 401 {status: "failed"} # if auth fauled
 HTTP 200 
 {
   status: "ok",
-  permissions: [0, 1] # 0 for Location, 1 for Airbags and Seatbelt
+  permissions: [0, 1] # 0 for Location, 1 for Security Options(Speed, Airbags and Seatbelt)
 }
 ```
 
@@ -50,7 +50,9 @@ send:
   filters: [
   	{name: "seatbelt", range: [0, 1, 2, 3]},
   	{name: "inhibited", range: ["airbag", "ESC"]},
-  	{name: "location", range: [lat, lon, lat, lon, ...]}
+  	{name: "location", range: [lat, lon, lat, lon, ...]},
+  	{name: "speed", limit: 120},
+  	{name: "crash"}
   ]
 }
 
