@@ -50,7 +50,7 @@ send:
   filters: [
   	{name: "seatbelt", range: [0, 1, 2, 3]},
   	{name: "inhibited", range: ["airbag", "ESC"]},
-  	{name: "location", range: [lat, lon, lat, lon, ...]},
+  	{name: "location", range: [lat, lon]},
   	{name: "speed", limit: 120},
   	{name: "crash"}
   ]
